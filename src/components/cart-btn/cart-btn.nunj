@@ -1,7 +1,7 @@
 {% from "../icon/icon.nunj" import icon %}
 
 {% macro cart(className) %}
-	<a href="#" class="cart {% if className %}{{ className }}{% endif %}">
+	<a href="#" class="cart {% if className %}{{ className }}{% endif %}" aria-label="Cart">
 		{{ icon({
 				iconName: 'cart',
 				className: 'icon',

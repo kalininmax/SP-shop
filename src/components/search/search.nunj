@@ -1,7 +1,7 @@
 {% from "../icon/icon.nunj" import icon %}
 
 {% macro search(className) %}
-	<a href="#" class="search {% if className %}{{ className }}{% endif %}">
+	<a href="#" class="search {% if className %}{{ className }}{% endif %}" aria-label="Search">
 		{{ icon({
 				iconName: 'search',
 				className: 'icon',

@@ -1,7 +1,7 @@
 {% from "../icon/icon.nunj" import icon %}
 
 {% macro siteLogo(className) %}
-	<a href="/" class="site-logo {% if className %}{{ className }}{% endif %}">
+	<a href="/" class="site-logo {% if className %}{{ className }}{% endif %}" aria-label="Home">
 		{{ icon({
 			iconName: 'site-logo',
 			className: 'icon',
