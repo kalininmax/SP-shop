@@ -26,6 +26,7 @@
 	padding: 0 15px;
 	text-decoration: none;
 	outline: none;
+	transition: opacity $default-transition-duration, background $default-transition-duration;
 
 	&:hover {
 		background-color: rgba($black, 0.05);

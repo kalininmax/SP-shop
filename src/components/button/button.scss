@@ -10,17 +10,15 @@ $btn-border-color: #cfcfcf;
 	line-height: 24px;
 	font-weight: 400;
 	text-align: center;
-	transition:
-		opacity $default-transition-duration,
-		background $default-transition-duration,
+	transition: opacity $default-transition-duration, background $default-transition-duration,
 		box-shadow $default-transition-duration;
 
 	&:hover {
-		box-shadow: 0 0 10px rgba($black, 0.3);
+		box-shadow: 0 2px 10px rgba($black, 0.15);
 	}
 
 	&:active {
-		opacity: 0.7;
+		opacity: 0.8;
 		box-shadow: none;
 	}
 
@@ -28,5 +26,13 @@ $btn-border-color: #cfcfcf;
 		border: 0;
 		color: #fff;
 		background-color: $blue;
+
+		&:hover {
+			box-shadow: 0 2px 10px rgba($black, 0.3);
+		}
+
+		&:active {
+			box-shadow: none;
+		}
 	}
 }
