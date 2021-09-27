@@ -1,0 +1,20 @@
+{% from "../button/button.nunj" import button %}
+{% from "../input-text/input-text.nunj" import inputText %}
+
+{% macro promoCode(className) %}
+	<form class="promo-code {% if className %}{{ className }}{% endif %}">
+		{{ inputText({
+				className: 'promo-code__input',
+				id: 'promo-code',
+				name: 'promo-code',
+				placeholder: 'Placeholder Text'
+			})
+		}}
+		{{ button({
+				type: 'submit',
+				className: 'button--primary',
+				children: 'Apply'
+				})
+			}}
+	</form>
+{% endmacro %}

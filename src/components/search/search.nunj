@@ -1,0 +1,12 @@
+{% from "../icon/icon.nunj" import icon %}
+
+{% macro search(className) %}
+	<a href="#" class="search {% if className %}{{ className }}{% endif %}">
+		{{ icon({
+				iconName: 'search',
+				className: 'icon',
+				attributes: 'width="24" height="24"'
+				})
+		}}
+	</a>
+{% endmacro %}

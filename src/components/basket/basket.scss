@@ -1,0 +1,28 @@
+.basket__list,
+.basket__promo-code {
+	padding: 0 40px 40px;
+	margin: 0 -40px;
+	margin-bottom: 40px;
+	border-bottom: 1px solid $grey;
+}
+
+.basket__price {
+	width: 100%;
+	max-width: 315px;
+
+	tbody {
+		display: flex;
+		flex-direction: column;
+		line-height: 34px;
+	}
+
+	tr {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	td {
+		line-height: 34px;
+	}
+}

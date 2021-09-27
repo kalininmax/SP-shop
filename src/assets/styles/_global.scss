@@ -1,0 +1,48 @@
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Roboto, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: 400;
+	overflow-x: hidden;
+}
+
+.invisible-container {
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	z-index: -1;
+}
+
+.visually-hidden {
+	position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+	max-width: $desktop-width;
+	padding: 0 30px;
+	margin: 0 auto;
+}
+
+.subtitle {
+	display: block;
+	font-size: 18px;
+	line-height: 21px;
+	font-weight: 700;
+}

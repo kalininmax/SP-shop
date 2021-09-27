@@ -1,0 +1,31 @@
+// ======= GLOBAL =======
+@import 'constants';
+@import 'lib/base';
+@import 'fonts';
+@import 'reset';
+@import 'global';
+@import 'layout';
+// @import 'controls';
+
+// ======= COMPONENTS =======
+@import '../../components/button/button';
+@import '../../components/input-radio/input-radio';
+@import '../../components/input-checkbox/input-checkbox';
+@import '../../components/input-text/input-text';
+@import '../../components/credit-card-number/credit-card-number';
+@import '../../components/search/search';
+@import '../../components/cart-btn/cart-btn';
+@import '../../components/burger-btn/burger-btn';
+@import '../../components/site-logo/site-logo';
+@import '../../components/menu/menu';
+@import '../../components/header/header';
+@import '../../components/stepper/stepper';
+@import '../../components/billing-form/billing-form';
+@import '../../components/credit-card/credit-card';
+@import '../../components/basket-item/basket-item';
+@import '../../components/promo-code/promo-code';
+@import '../../components/basket-list/basket-list';
+@import '../../components/basket/basket';
+
+// ======= PAGES =======
+@import 'pages/main';

@@ -1,0 +1,13 @@
+{% from "../icon/icon.nunj" import icon %}
+
+{% macro cart(className) %}
+	<a href="#" class="cart {% if className %}{{ className }}{% endif %}">
+		{{ icon({
+				iconName: 'cart',
+				className: 'icon',
+				attributes: 'width="24" height="21"'
+				})
+		}}
+		<span class="cart__count">2</span>
+	</a>
+{% endmacro %}

@@ -1,0 +1,30 @@
+{% from "../basket-list/basket-list.nunj" import basketList %}
+{% from "../promo-code/promo-code.nunj" import promoCode %}
+
+{% macro basket(className) %}
+	<section class="{% if className %}{{ className }}{% endif %} basket">
+		<h2 class="page__basket-subtitle subtitle">My basket</h2>
+		{{ basketList('basket__list') }}
+		<h2 class="page__basket-subtitle subtitle">
+
+		Promo code</h2>
+		{{ promoCode('basket__promo-code') }}
+		<table class="basket__price">
+			<tbody>
+				<tr>
+					<td>Subtotal</td><td class="basket__subtotal-value">$1 050</td>
+				</tr>
+				<tr>
+					<td>Tax</td><td class="basket__tax-value">$100</td>
+				</tr>
+				<tr>
+					<td>Shipping</td><td class="basket__shipping-value">$150</td>
+				</tr>
+				<tr>
+					<td class="subtitle">Total</td>
+					<td class="subtitle basket__total-value">$1 300</td>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+{% endmacro %}

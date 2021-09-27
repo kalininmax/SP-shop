@@ -1,0 +1,20 @@
+{% macro inputText(props) %}
+	<div class="{% if props.className %}{{ props.className }}{% endif %} input-text">
+		<div class="input-text__inner">
+			<label {% if props.id %}for="{{props.id}}"{% endif %}>{{ props.labelText }}</label>
+			{% if props.tooltip %} <button type="button" class="input-text__tooltip" tabindex="-1">?</button>{% endif %}
+			<p class="input-text__tooltip-text">{{ props.tooltip }}</p>
+			{% if props.srOnlyText %} <span class="visually-hidden">{{ props.srOnlyText }}</span>{% endif %}
+		</div>
+		<input
+			type="{% if props.type %}{{ props.type }}{% else %}text{% endif %}"
+			{% if props.id %}id="{{ props.id }}"{% endif %}
+			{% if props.name %}name="{{ props.name }}"{% endif %}
+			{% if props.value %}value="{{ props.value }}"{% endif %}
+			{% if props.placeholder %}placeholder="{{props.placeholder}}"{% endif %}
+			{% if props.autocomplete %}autocomplete="{{props.autocomplete}}"{% endif %}
+			{% if props.pattern %}pattern="{{props.pattern}}"{% endif %}
+			{% if props.maxLength %}maxlength="{{props.maxLength}}"{% endif %}
+			{% if props.required %}required{% endif %}>
+	</div>
+{% endmacro %}

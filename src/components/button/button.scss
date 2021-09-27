@@ -1,0 +1,32 @@
+$btn-border-color: #cfcfcf;
+
+.button {
+	@include reset-btn();
+	display: inline-block;
+	padding: 8px 30px;
+	border: 1px solid $btn-border-color;
+	border-radius: 3px;
+	font-size: 14px;
+	line-height: 24px;
+	font-weight: 400;
+	text-align: center;
+	transition:
+		opacity $default-transition-duration,
+		background $default-transition-duration,
+		box-shadow $default-transition-duration;
+
+	&:hover {
+		box-shadow: 0 0 10px rgba($black, 0.3);
+	}
+
+	&:active {
+		opacity: 0.7;
+		box-shadow: none;
+	}
+
+	&--primary {
+		border: 0;
+		color: #fff;
+		background-color: $blue;
+	}
+}

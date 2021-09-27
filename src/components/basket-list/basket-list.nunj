@@ -1,0 +1,17 @@
+{% from "../icon/icon.nunj" import icon %}
+{% from "../basket-item/basket-item.nunj" import basketItem %}
+
+{% macro basketList(className) %}
+	<ul class="basket-list {% if className %}{{ className }}{% endif %}">
+		{% for item in basketItems %}
+			{{ basketItem({
+					className: 'basket-list__item',
+					image: item.image,
+					title: item.title,
+					price: item.price,
+					count: item.count
+				})
+			}}
+		{% endfor %}
+	</ul>
+{% endmacro %}

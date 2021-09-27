@@ -1,0 +1,25 @@
+{% extends "../ext/base.nunj" %}
+
+{% from "../../components/button/button.nunj" import button %}
+{% from "../../components/icon/icon.nunj" import icon %}
+{% from "../../components/header/header.nunj" import header %}
+{% from "../../components/stepper/stepper.nunj" import stepper %}
+{% from "../../components/billing-form/billing-form.nunj" import billingForm %}
+{% from "../../components/basket/basket.nunj" import basket %}
+
+
+{% block content %}
+
+	{{ header('page__header') }}
+
+	<main class="page__main">
+		<h1 class="visually-hidden">Ordering</h1>
+		<section class="page__order">
+			{{ stepper('page__stepper') }}
+			<h2 class="page__order-subtitle subtitle">Billing Information</h2>
+			{{ billingForm('page__billing-form') }}
+		</section>
+		{{ basket('page__basket') }}
+	</main>
+
+{% endblock content %}

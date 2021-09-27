@@ -1,0 +1,34 @@
+{% from "../input-text/input-text.nunj" import inputText %}
+
+{% macro creditCardNumber(class) %}
+	<div class="{% if class %}{{ class }}{% endif %} credit-card-number">
+		{{ inputText({
+				id: 'cc-number',
+				name: 'cc-number',
+				labelText: 'Card number',
+				pattern: '[0-9]{4}',
+				maxLength: '4',
+				autocomplete: 'cc-number',
+				required: true
+			})
+		}}
+		{{ inputText({
+				pattern: '[0-9]{4}',
+				maxLength: '4',
+				required: true
+			})
+		}}
+		{{ inputText({
+				pattern: '[0-9]{4}',
+				maxLength: '4',
+				required: true
+			})
+		}}
+		{{ inputText({
+				pattern: '[0-9]{4}',
+				maxLength: '4',
+				required: true
+			})
+		}}
+	</div>
+{% endmacro %}

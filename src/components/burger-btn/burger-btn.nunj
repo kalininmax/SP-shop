@@ -1,0 +1,3 @@
+{% macro burger(className) %}
+	<button class="burger" title="Меню"></button>
+{% endmacro %}

@@ -1,0 +1,36 @@
+.cart {
+	position: relative;
+	display: flex;
+	align-items: center;
+	padding-top: 5px;
+	padding-left: 10px;
+	padding-right: 16px;
+	margin-right: -10px;
+
+	&:hover {
+		background-color: rgba($black, 0.05);
+	}
+
+	&:focus,
+	&--active {
+		background-color: rgba($black, 0.1);
+	}
+
+	&:active {
+		opacity: 0.8;
+	}
+}
+
+.cart__count {
+	position: absolute;
+	top: 26px;
+	right: 10px;
+	width: 13px;
+	height: 13px;
+	border-radius: 50%;
+	background-color: $blue;
+	color: $white;
+	font-size: 10px;
+	line-height: 13px;
+	text-align: center;
+}

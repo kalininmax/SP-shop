@@ -1,0 +1,25 @@
+.billing-form {
+	max-width: 660px;
+}
+
+.billing-form__group {
+	display: flex;
+	flex-wrap: wrap;
+	padding-left: 30px;
+	margin-bottom: 40px;
+
+	.button--primary {
+		margin-left: auto;
+	}
+}
+
+.billing-form__checkbox {
+
+	&:not(:last-child) {
+		margin-bottom: 12px;
+	}
+}
+
+.billing-form__radio:not(:last-child) {
+	margin-right: 80px;
+}

@@ -1,0 +1,66 @@
+{% from "../icon/icon.nunj" import icon %}
+{% from "../input-radio/input-radio.nunj" import inputRadio %}
+{% from "../input-checkbox/input-checkbox.nunj" import inputCheckbox %}
+{% from "../button/button.nunj" import button %}
+{% from "../credit-card/credit-card.nunj" import creditCard %}
+
+{% macro billingForm(class) %}
+	<form class="{% if class %}{{ class }}{% endif %} billing-form">
+		<div class="billing-form__group billing-form__pay-method">
+			{{ inputRadio({
+				className: 'billing-form__radio',
+				id: 'credit-card',
+				name: 'pay-methods',
+				value: 'Credit card',
+				labelText: 'Pay with Credit Card',
+				checked: true
+				})
+			}}
+			{{ inputRadio({
+				className: 'billing-form__radio',
+				id: 'paypal',
+				name: 'pay-methods',
+				value: 'PayPal',
+				labelText: icon({
+					iconName: 'paypal-logo',
+					className: 'icon',
+					attributes: 'width="85" height="21"'
+				}),
+				srOnlyText: 'PayPal'
+				})
+			}}
+		</div>
+		{{ creditCard('billing-form__group billing-form__card') }}
+		<div class="billing-form__group">
+			{{ inputCheckbox({
+				className: 'billing-form__checkbox',
+				id: 'save-info',
+				name: 'save-info',
+				value: 'Save credit card',
+				labelText: 'Save information of this credit card',
+				checked: true
+				})
+			}}
+			{{ inputCheckbox({
+				className: 'billing-form__checkbox',
+				id: 'privacy-policy',
+				name: 'privacy-policy',
+				value: 'I accept the Privacy Policies',
+				labelText: 'I accept the&nbsp;<a href="#">terms and comditions</a>&nbsp;and the&nbsp;<a href="#">Privacy Policies</a>'
+				})
+			}}
+		</div>
+		<div class="billing-form__group">
+			{{ button({
+				children: 'Back'
+				})
+			}}
+			{{ button({
+				type: 'submit',
+				className: 'button--primary',
+				children: 'Check Out'
+				})
+			}}
+		</div>
+	</form>
+{% endmacro %}

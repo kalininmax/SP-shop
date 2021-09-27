@@ -1,0 +1,23 @@
+{% from "../icon/icon.nunj" import icon %}
+
+{% macro basketItem(props) %}
+	<li class="{% if props.className %}{{ props.className }}{% endif %} basket-item">
+		<img class="basket-item__image" src="{% if props.image %}{{ props.image }}{% endif %}" width="100" height="100" alt="">
+		<div class="basket-item__info">
+			<p class="basket-item__title">{% if props.title %}{{ props.title }}{% endif %}</p>
+			<p class="basket-item__price">
+				<button class="basket-item__btn basket-item__btn--sub" type="button" aria-label="sub">
+					<span class="visually-hidden">Sub</span>
+				</button>
+				<span class="basket-item__count">{% if props.count %}{{ props.count }}{% endif %}</span>
+				<button class="basket-item__btn basket-item__btn--add" type="button" aria-label="add">
+					<span class="visually-hidden">Add</span>
+				</button>
+				<span class="basket-item__sum">$ {% if props.price %}{{ props.price }}{% endif %}</span>
+			</p>
+		</div>
+		<button class="basket-item__delete" type="button">
+			<span class="visually-hidden">Delete</span>
+		</button>
+	</li>
+{% endmacro %}

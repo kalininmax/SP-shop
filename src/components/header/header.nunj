@@ -1,0 +1,9 @@
+{% from "../menu/menu.nunj" import menu %}
+
+{% macro header(class) %}
+	<header class="{% if class %}{{class}}{% endif %} header">
+		<div class="container header__container">
+			{{ menu() }}
+		</div>
+	</header>
+{% endmacro %}

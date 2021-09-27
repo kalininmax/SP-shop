@@ -1,0 +1,21 @@
+{% from "../icon/icon.nunj" import icon %}
+{% from "../site-logo/site-logo.nunj" import siteLogo %}
+{% from "../search/search.nunj" import search %}
+{% from "../cart-btn/cart-btn.nunj" import cart %}
+{% from "../burger-btn/burger-btn.nunj" import burger %}
+
+{% macro menu() %}
+	<nav class="menu">
+		{{ siteLogo() }}
+		<ul class="menu__list menu__list--main">
+			{% for item in menuItems %}
+				<li class="menu__item"><a href="{{ item.path }}" class="menu__link">{{ item.name }}</a></li>
+			{% endfor %}
+		</ul>
+		<ul class="menu__list">
+			<li class="menu__item">{{ search() }}</li>
+			<li class="menu__item">{{ cart() }}</li>
+			<li class="menu__item">{{ burger() }}</li>
+		</ul>
+	</nav>
+{% endmacro %}

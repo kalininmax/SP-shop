@@ -1,0 +1,57 @@
+.page__body {
+	display: grid;
+	grid-template-rows: min-content 1fr;
+}
+
+.page__header {
+	border-bottom: 1px solid $grey;
+}
+
+.page__stepper {
+	margin: 0 -75px;
+	margin-bottom: 60px;
+}
+
+.page__main {
+	position: relative;
+	display: flex;
+}
+
+.page__order {
+	flex: 4;
+	max-width: 1200px;
+	padding: 60px;
+	margin-left: auto;
+
+}
+
+.page__order-subtitle {
+	max-width: 540px;
+	margin: 0 auto;
+	margin-bottom: 40px;
+}
+
+.page__basket {
+	display: none;
+	flex: 1;
+	min-width: 330px;
+	max-width: 460px;
+	padding: 40px;
+	border-left: 1px solid $grey;
+	transition:
+		opacity $default-transition-duration $default-transition-function,
+		right $default-transition-duration $default-transition-function;
+
+	@media (min-width: 1090px) {
+		display: block;
+	}
+}
+
+.page__basket-subtitle {
+	margin-bottom: 30px;
+}
+
+.page__billing-form {
+	margin: 0 auto;
+}
+

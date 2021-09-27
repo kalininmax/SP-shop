@@ -1,0 +1,40 @@
+{% from "../input-text/input-text.nunj" import inputText %}
+{% from "../credit-card-number/credit-card-number.nunj" import creditCardNumber %}
+
+{% macro creditCard(class) %}
+	<div class="{% if class %}{{ class }}{% endif %} credit-card">
+
+	{{ inputText({
+			className: 'credit-card__name',
+			id: 'cc-name',
+			name: 'name',
+			labelText: 'Name on card',
+			placeholder: 'Placeholder Text',
+			autocomplete: 'cc-name',
+			required: true
+		})
+	}}
+	{{ creditCardNumber('credit-card__number') }}
+	{{ inputText({
+			className: 'credit-card__date',
+			type: 'number',
+			id: 'cc-exp',
+			name: 'expire date',
+			labelText: 'Expire date',
+			autocomplete: 'cc-exp',
+			required: true
+		})
+	}}
+	{{ inputText({
+			className: 'credit-card__code',
+			type: 'number',
+			id: 'cc-csc',
+			name: 'cvv code',
+			labelText: 'CVV code',
+			tooltip: 'Tooltip about CVV code',
+			autocomplete: 'cc-csc',
+			required: true
+		})
+	}}
+	</div>
+{% endmacro %}

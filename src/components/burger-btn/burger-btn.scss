@@ -1,0 +1,47 @@
+.burger {
+	position: relative;
+	left: 0;
+	display: flex;
+	width: 64px;
+	margin-right: -18px;
+	margin-left: 10px;
+	border: 0;
+	background: 0;
+	opacity: 1;
+	cursor: pointer;
+	transition:
+		opacity $default-transition-duration $default-transition-function,
+		width $default-transition-duration $default-transition-function;
+
+	&:hover {
+		background-color: rgba($black, 0.05);
+	}
+
+	&:focus,
+	&--active {
+		background-color: rgba($black, 0.1);
+	}
+
+	&:active {
+		opacity: 0.8;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		left: 50%;
+		top: 40%;
+		width: 29px;
+		height: 2px;
+		transform: translate(-50%, -50%);
+		background-color: $black;
+		box-shadow:
+			0 10px 0 0 $black,
+			0 20px 0 0 $black;
+	}
+
+	@media (min-width: $tablet-width) {
+		width: 0;
+		opacity: 0;
+	}
+}

@@ -1,0 +1,25 @@
+/* Use Google Fonts */
+/* @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin,cyrillic) */
+/* or */
+/* @include font-face("Samplina Neue", "../fonts/SamplinaNeue"); */
+
+@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: local('Roboto'), local('Roboto Regular'), url(../fonts/roboto-regular.woff2) format('woff2'),
+		url(../fonts/roboto-regular.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: local('Roboto Bold'), local('Roboto-Bold'), url(../fonts/roboto-bold.woff2) format('woff2'),
+		url(../fonts/roboto-bold.woff) format('woff');
+}
+
+// @include font-face("Roboto", "../fonts/roboto-regular", 400, normal);
+// @include font-face("Roboto", "../fonts/roboto-bold", 700, normal);

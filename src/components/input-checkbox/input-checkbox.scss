@@ -1,0 +1,70 @@
+$checkbox-color: #cfcfcf;
+$text-color: #8c8c8c;
+
+.input-checkbox {
+	--circle-size: 18px;
+	--dot-size: 8px;
+
+	position: relative;
+	display: flex;
+
+	label {
+		position: relative;
+		display: flex;
+		align-items: center;
+		color: $text-color;
+		cursor: pointer;
+		transition:
+			opacity $default-transition-duration,
+			color $default-transition-duration;
+
+		&:hover {
+			color: $black;
+		}
+
+		&:active {
+			opacity: 0.75;
+		}
+
+		&::before,
+		&::after {
+			content: "";
+			flex-shrink: 0;
+		}
+
+		&::before {
+			width: var(--circle-size);
+			height: var(--circle-size);
+			border: 1px solid $checkbox-color;
+			margin-right: 10px;
+			transition: border-color $default-transition-duration;
+		}
+
+		&:hover::before {
+			border-color: $blue;
+		}
+
+		&:active::before {
+			border-color: rgba($blue, 0.75);
+		}
+	}
+
+	a {
+		text-decoration: none;
+		color: $black;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	input:checked + label::after {
+		position: absolute;
+		top: 50%;
+		left: calc((var(--circle-size) - var(--dot-size)) / 2);
+		transform: translateY(-50%);
+		width: var(--dot-size);
+		height: var(--dot-size);
+		background-color: $blue;
+	}
+}
