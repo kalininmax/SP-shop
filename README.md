@@ -1,3 +1,7 @@
+# Тестовое задание для sborkaproject.ru
+[Ссылка](https://docs.google.com/document/d/1wZmJCi0X05CxHjA6nRUhmj8NYr6YVq9NFqeQ4JkgqRU/edit) на задание
+
+
 # SP.Starter
 
 **Шаблон проекта для быстрого старта.**
