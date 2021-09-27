@@ -3,6 +3,7 @@ const SHIPPING_PRICE = 150;
 
 const countControlButtons = document.querySelectorAll('.basket-item__btn');
 const deleteButtons = document.querySelectorAll('.basket-item__delete');
+const cartCount = document.querySelector('.cart__count');
 const subtotal = document.querySelector('.basket__subtotal-value');
 const tax = document.querySelector('.basket__tax-value');
 const shipping = document.querySelector('.basket__shipping-value');
@@ -31,6 +32,11 @@ const updateСalculations = () => {
 	const sumTaxValue = Math.floor(subtotalValue / 100) * TAX_VALUE;
 	const shippingValue = itemsSumArray.length > 0 ? SHIPPING_PRICE : 0;
 
+	if (itemsSumArray.length === 0) {
+		cartCount.remove();
+	}
+
+	cartCount.textContent = itemsSumArray.length;
 	subtotal.textContent = `$${subtotalValue}`;
 	tax.textContent = `$${sumTaxValue}`;
 	shipping.textContent = `$${shippingValue}`;
