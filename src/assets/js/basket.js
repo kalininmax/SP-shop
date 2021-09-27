@@ -10,6 +10,7 @@ const shipping = document.querySelector('.basket__shipping-value');
 const total = document.querySelector('.basket__total-value');
 
 const getNumberValue = str => Number(str.replace(/[^0-9]/g, ''));
+const numberWithSpaces = number => number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
 
 const getSubtotalValue = arr => {
 	return arr.reduce((a, b) => {
@@ -37,10 +38,10 @@ const updateСalculations = () => {
 	}
 
 	cartCount.textContent = itemsSumArray.length;
-	subtotal.textContent = `$${subtotalValue}`;
-	tax.textContent = `$${sumTaxValue}`;
-	shipping.textContent = `$${shippingValue}`;
-	total.textContent = `$${subtotalValue + sumTaxValue + shippingValue}`;
+	subtotal.textContent = `$${numberWithSpaces(subtotalValue)}`;
+	tax.textContent = `$${numberWithSpaces(sumTaxValue)}`;
+	shipping.textContent = `$${numberWithSpaces(shippingValue)}`;
+	total.textContent = `$${numberWithSpaces(subtotalValue + sumTaxValue + shippingValue)}`;
 };
 
 updateСalculations();
@@ -64,7 +65,7 @@ const onCountButtonClick = evt => {
 
 	count.textContent = countValue;
 	const sumValue = priceValue * countValue;
-	sum.textContent = `$ ${sumValue}`;
+	sum.textContent = `$ ${numberWithSpaces(sumValue)}`;
 
 	updateСalculations();
 };
