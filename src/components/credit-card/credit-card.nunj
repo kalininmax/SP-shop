@@ -21,7 +21,6 @@
 			id: 'cc-exp',
 			name: 'expire date',
 			labelText: 'Expire date',
-			autocomplete: 'cc-exp',
 			required: true
 		})
 	}}
@@ -32,7 +31,6 @@
 			name: 'cvv code',
 			labelText: 'CVV code',
 			tooltip: 'Tooltip about CVV code',
-			autocomplete: 'cc-csc',
 			required: true
 		})
 	}}
