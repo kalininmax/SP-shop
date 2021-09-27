@@ -1,5 +1,6 @@
 # Тестовое задание для sborkaproject.ru
-[Ссылка](https://docs.google.com/document/d/1wZmJCi0X05CxHjA6nRUhmj8NYr6YVq9NFqeQ4JkgqRU/edit) на задание
+[Ссылка](https://docs.google.com/document/d/1wZmJCi0X05CxHjA6nRUhmj8NYr6YVq9NFqeQ4JkgqRU/edit) на задание  
+Опубликованная версия — [sp-shop-kalininmax.vercel.app](https://sp-shop-kalininmax.vercel.app)
 
 
 # SP.Starter
