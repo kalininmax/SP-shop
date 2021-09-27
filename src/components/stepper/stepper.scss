@@ -10,21 +10,32 @@ $stepper-color: #d5d5d5;
 	--line-size: 2px;
 	position: relative;
 	display: flex;
-	flex-direction: column;
 	flex: 1;
-	text-align: center;
+	align-items: center;
+
+	&:last-child {
+		flex: 0;
+	}
+
+	span {
+		position: absolute;
+		left: calc(var(--circle-size) / 2);
+		top: 27px;
+		min-width: max-content;
+		transform:translateX(-50%);
+	}
 
 	&::before {
 		counter-increment: number;
 		content: counter(number);
+		flex-shrink: 0;
 		width: var(--circle-size);
 		height: var(--circle-size);
 		border: 1px solid $blue;
 		border-radius: 50%;
-		margin: 0 auto;
-		margin-bottom: 10px;
 		font-size: 10px;
 		line-height: 15px;
+		text-align: center;
 		color: $white;
 		background-color: $blue;
 	}
@@ -42,10 +53,7 @@ $stepper-color: #d5d5d5;
 
 	&:not(:last-child)::after {
 		content: '';
-		position: absolute;
-		top: calc((var(--circle-size) - var(--line-size)) / 2);
-		left: calc(50% + (var(--circle-size) / 2));
-		width: calc(100% - var(--circle-size));
+		width: 100%;
 		height: var(--line-size);
 		background-color: $blue;
 	}

@@ -2,7 +2,7 @@
 	<ol class="{% if class %}{{class}}{% endif %} stepper">
 		{% for stage in orderStages %}
 			<li class="stepper__item {% if stage.active %} stepper__item--active {% endif %}">
-				{{ stage.name }}
+				<span>{{ stage.name }}</span>
 			</li>
 		{% endfor %}
 	</ol>
