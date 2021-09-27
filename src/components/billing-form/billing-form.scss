@@ -1,11 +1,12 @@
 .billing-form {
-	max-width: 660px;
+	max-width: 900px;
 }
 
 .billing-form__group {
 	display: flex;
 	flex-wrap: wrap;
-	padding-left: 30px;
+	max-width: 630px;
+	padding: 0 30px;
 	margin-bottom: 40px;
 
 	.button--primary {
