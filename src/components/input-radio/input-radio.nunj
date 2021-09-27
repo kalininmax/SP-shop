@@ -7,7 +7,9 @@
 			{% if props.name %}name="{{ props.name }}"{% endif %}
 			{% if props.value %}value="{{ props.value }}"{% endif %}
 			{% if props.checked %}checked{% endif %}>
-		<label {% if props.id %}for="{{props.id}}"{% endif %}>{% if props.labelText %}{{ props.labelText }}{% endif %}</label>
-		{% if props.srOnlyText %} <span class="visually-hidden">{{ props.srOnlyText }}</span> {% endif %}
+		<label {% if props.id %}for="{{props.id}}"{% endif %}>
+			{% if props.labelText %}{{ props.labelText }}{% endif %}
+			{% if props.srOnlyText %} <span class="visually-hidden">{{ props.srOnlyText }}</span> {% endif %}
+		</label>
 	</div>
 {% endmacro %}
