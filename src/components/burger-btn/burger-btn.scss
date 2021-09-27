@@ -9,8 +9,7 @@
 	background: 0;
 	opacity: 1;
 	cursor: pointer;
-	transition:
-		opacity $default-transition-duration $default-transition-function,
+	transition: opacity $default-transition-duration $default-transition-function,
 		width $default-transition-duration $default-transition-function;
 
 	&:hover {
@@ -35,9 +34,7 @@
 		height: 2px;
 		transform: translate(-50%, -50%);
 		background-color: $black;
-		box-shadow:
-			0 10px 0 0 $black,
-			0 20px 0 0 $black;
+		box-shadow: 0 10px 0 0 $black, 0 20px 0 0 $black;
 	}
 
 	@media (min-width: $tablet-width) {

@@ -14,9 +14,7 @@ $text-color: #8c8c8c;
 		align-items: center;
 		color: $text-color;
 		cursor: pointer;
-		transition:
-			opacity $default-transition-duration,
-			color $default-transition-duration;
+		transition: opacity $default-transition-duration, color $default-transition-duration;
 
 		&:hover {
 			color: $black;
@@ -28,7 +26,7 @@ $text-color: #8c8c8c;
 
 		&::before,
 		&::after {
-			content: "";
+			content: '';
 			flex-shrink: 0;
 		}
 

@@ -22,7 +22,6 @@
 	max-width: 1200px;
 	padding: 60px;
 	margin-left: auto;
-
 }
 
 .page__order-subtitle {
@@ -38,8 +37,7 @@
 	max-width: 460px;
 	padding: 40px;
 	border-left: 1px solid $grey;
-	transition:
-		opacity $default-transition-duration $default-transition-function,
+	transition: opacity $default-transition-duration $default-transition-function,
 		right $default-transition-duration $default-transition-function;
 
 	@media (min-width: 1090px) {
@@ -54,4 +52,3 @@
 .page__billing-form {
 	margin: 0 auto;
 }
-

@@ -25,7 +25,7 @@ $tooltip-color: #dbdbdb;
 
 		&:hover,
 		&:focus {
-			background-color: darken($input-bg-color, 3) ;
+			background-color: darken($input-bg-color, 3);
 		}
 	}
 }
@@ -45,13 +45,11 @@ $tooltip-color: #dbdbdb;
 	text-align: center;
 	font-size: 10px;
 	line-height: 13px;
-	transition:
-		opacity $default-transition-duration,
-		background $default-transition-duration;
+	transition: opacity $default-transition-duration, background $default-transition-duration;
 
 	&:hover,
 	&:focus {
-		background-color: darken($tooltip-color, 3) ;
+		background-color: darken($tooltip-color, 3);
 	}
 
 	&:active {
@@ -73,7 +71,5 @@ $tooltip-color: #dbdbdb;
 	box-shadow: 0px 0px 10px rgba($black, 0.19);
 	transform: translateX(100%);
 	opacity: 0;
-	transition:
-		opacity $default-transition-duration,
-		transform $default-transition-duration;
+	transition: opacity $default-transition-duration, transform $default-transition-duration;
 }

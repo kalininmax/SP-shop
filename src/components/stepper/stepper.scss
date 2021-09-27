@@ -41,7 +41,7 @@ $stepper-color: #d5d5d5;
 	}
 
 	&:not(:last-child)::after {
-		content: "";
+		content: '';
 		position: absolute;
 		top: calc((var(--circle-size) - var(--line-size)) / 2);
 		left: calc(50% + (var(--circle-size) / 2));

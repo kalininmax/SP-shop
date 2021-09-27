@@ -16,7 +16,7 @@ $radio-color: #cfcfcf;
 
 		&::before,
 		&::after {
-			content: "";
+			content: '';
 			flex-shrink: 0;
 			border-radius: 50%;
 		}
